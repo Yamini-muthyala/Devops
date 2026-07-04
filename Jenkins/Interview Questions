@@ -1,0 +1,75 @@
+1) What is Jenkins and why should we use it?
+Jenkins is a leading open-source, free automation tool that is used to develop and test
+software projects.
+Reasons why Jenkins is widely used:
+-Used to detect faults in software development and systematize the testing of buildss
+-Used to constantly monitor the code simultaneously and add changes to the build.
+-Jenkins consists of an installer package for most operating systems.
+-Used to keep the team updated and synchronized about the changes incorporated.
+-Used to build CI/CD pipelines since it has plugin capabilities and is easy to use.
+
+2) What are the features of Jenkins?
+Jenkins features include:
+-It is an open-source automation tool and it is free.
+-Gives pipeline support
+-installation is easy on systems with multiple operations.
+-large number of plugins
+-Jenkins upgrades effortlessly.
+-speedy release cycle
+-Configuration setup is easy
+
+3) What are the prerequisites to use Jenkins?
+The requirements to use Jenkins are:
+-First requirement is an accessible source code repository, for instance, a Git repository.
+-A build script in working condition, example- Maven script checked into the repository
+
+4) How do we manually restart Jenkins?
+The following commands are used to restart Jenkins manually:
+-(jenkins_url)/safe restart — Wait until all the builds are completed before restarting.
+-(jenkins_url)/restart-To force restart without waiting for build completion
+
+5) What does “continuous integration” mean?
+Continuous Integration is the continuous process of checking the code made by developers
+into a version control system numerous times. The build is automated in the process to
+inspect and detect bugs in the developed code. Continuous integration comprises of:
+
+6) what is Jenkins Pipeline?
+Jenkins Pipeline is collection of features of Jenkins. They are installed as plugins that allows
+delivery of pipeline implementation continuously.
+
+7) What are the advantages of using Jenkins?
+The advantages of using Jenkins are:
+-User-friendly, free, and it is an open source
+-Trouble-free Installation
+-Code deployment is convenient and takes very less time. It simultaneously generatesreports.
+-Helps in collaboration between the operation and development teams.
+-Free of cost
+-Detection of code errors at an early stage
+-Reduced integration issues due to automation of integration work
+-Rich plugin ecosystem
+-Platform independence
+
+8) What are the components that you can integrate Jenkins with?
+Jenkins is mainly integrated with the following components:
+-First is the version control system, for example: GIT, SVN
+-Another one is build tools. An example is Apache Mave
+
+9) How does Hudson relate to Jenkins?
+Jenkins was previously known as Hudson. It is a continuous integration tool and is open
+source, written in Java.
+
+10) Explain how to set up Build jobs in Jenkins.
+The following steps will help you to build jobs in Jenkins:
+Step 1 -First, open the Jenkins dashboard and click on the New Item.
+Step 2 -Enter the item name and choose the “Freestyle project option”.
+Step 3 -Specify the details of the job.
+Step 4 -Next, specify the location of files that need to be built.
+Step 5 -In case the repository is hosted on GitHub, enter the URL of that repository here.
+Step 6 -Build section and click on the Add build step.
+Step 7 -In the command window, enter the following commands and then click on the Save
+button.
+(Javac HelloWorld.java
+Java HelloWorld)
+Step 8 -Now click on the “Build” option to see whether the job is defined well or not.
+Step 9 -Once the build is scheduled, it will run.
+Step 10 -To see details of the build, click on the Console Output link.
