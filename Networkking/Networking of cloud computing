@@ -1,0 +1,198 @@
+***Virtualization:
+   -----------------
+Virtualization is technology that ypu can use to create virtual representations of services, storage networks and other physical machines.
+virtual software mimics the functions of physical hardware to run multiple virtual machines simultanenously on a single physical machines.
+
+***IPV4 ip Addressing:
+   --------------------
+IPV4 ip addresses are 32-bit numbers that are typically displayed in dotted decimal notation.A 32-bit addresscontains two primary parts:
+1.The Network prefix
+2.The Host number.
+All hosting within a singlenetwork share the same network address. Each host also has an address that uniquely identifiers it.
+ex:
+172.16.254.1
+10101100.00010000.11111110.00000001
+--------
+ 8 bits
+------------------------------------
+            32 bits(4 bytes)
+
+IPV4 addresses are categorized into 3 basic types:
+1.Unicast address.
+2.Multicast address.
+3.Broadcast address.
+
+***IPV6 ip addressing:
+   -------------------
+An IPV6 address is represented as eight groups of four hexadecimal digits,each group representing 16 bits the groups are separeated by colomns.
+The standereds provide flexbility in the representation of IPV6 addresses.
+ex:
+2001:0DB8:AC01:FE01:0000:0000:0000:0000
+0010000000000001:0000110110111000:1010110000010000:111111000000001
+EX-2:
+2001:0bd8:ac01:fe01:0000:0000:1a2f:1a2b
+--------------/ ---/ -------------------
+     |            |               |
+   Site        subnet            Interface
+   prefix        ID                  ID
+   ----------------
+         |
+      Networking
+      prefix
+IPV6 addresses are 3 types:
+1.Unicast address mode.
+2.Multicast address mode.
+3.Anycast address mode.
+
+***Subnetting:
+   ------------
+Subnetting is the process of creating a subnetwork (also known as a subnet)within a network.Network interface and device with ina
+subnet can communicate with each other direction.Routers facilitate communication between different subnet.
+5 classes of subnetting:
+1. Class A: First octet value 0-126
+2. Class A: First octet value 128-191
+3. Class A: First octet value 191-233
+4. Class A: First octet value 224-239
+5. Class A: First octet value 240-255
+------------------------------------------------------------------------------------------------------------------------------------
+|      Class               Range                  Length of network               # of networks                  #of Hosts         |
+|                                                                                                                                  |
+|        A              1-126                       N H H H                        126                           16,777,214        |
+|                     1st bit= 0                       (8)                                                          (2^24)         |
+|----------------------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                                  |
+|        B            128-191                       N N H H                        16.384                            65,534        |
+|                     2nd bit +10                     (16)                        (2^16)^-2=2^14                      (2^16)       |
+|----------------------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                                  |
+|        C            192-223                     N N N H                        2,097,152                            254          |
+|                    3rd bit =110                     (24)                        2 millions(2^24-3)=2^21                          |
+-------------------------------------------------------------------------------------------------------------------------------------
+
+*Bradcast ID:
+Network IP  <---------| 1 | 254 | 1 | ---------> Broadcast IP
+                              |
+                           Host ID
+Number of HOSTS/NETWORK =2^host-bit-2
+
+*NETWORK ID:
+                                                    IP address
+                                        ____________________________________
+Before Subnetting ------------->         Network Identifier | Host identifer
+After Subnetting  ------------->         Network identifier | Subnet Identifier | Host identifier
+
+*CIDR:(Classless inter domain routing):
+ex:    202.201.150.10/27     (Class C) 11111111 11111111 11111111 11100000
+       15.10.65.40/15        (Class A) 11111111 11111110 00000000 00000000
+
+
+example-1:                                                                        |       example-2:
+205.150.65.0/26 (Class C )  11111111 11111111 11111111 11000000                   |       205.150.65.0/24 (Class c) 11111111 11111111 11111111 11110000
+subnet work : 255.255.255.0 => 255.255.255.192   |=> 2^7+ 2^6=128+64=192          |       Subnet mark : 255.255.255.0 => 255.255.255.240
+network id  : 205.150.65.0                                                        |       Network ID  : 205.150.65.0 
+# of subnets =2^n         ex: 2^2=4                                               |       # of subnets =2^n          ex:2^4=16
+# of Host =2^n-2          ex: 2^6-2=64-2=62                                       |       # of Host    =2^n-2        ex:2^4-2=16-2=14                                                                     |       
+Host range= 205.150.65.1                                                          |       Host range  = 205.150.65.1                    
+               |                                                                  |                           |
+               |                                                                  |                           |
+            205.150.65.62                                                         |                     205.150.65.14
+Broadcast IP= 205.150.65.63                                                       |       Broadcast IP = 205.150.65.15
+
+
+
+Note: Dynamic IP addresses periodically change --------------Static IP address never change.
+            |                                                        |
+            |                                                ________v___________________________________________
+            |                                                |       |   _______________DNS server              |
+_____________________             __________                 |       |                                          |
+|   Local Network    -----------> | Router |  ------------>  |  ISP Router IP                                   |
+_____________________             ___________                |              |______________IP Web server        |
+                                                             |_________________Internet_________________________|
+
+
+
+
+
+
+***Routing:
+   --------
+Routing is the process of selecr=ting a path for traffic in a network or Between or across multiple networks.Broadly,routing is performed in many types of networks,include 
+circuit-switched networks,such as a public switched telephone network and computer networks, such as a the internet.
+
+                                                            Types of routing
+                             _______________________________________________________________________________
+                            |                                       |                                       |      
+                     Static Routing                          Dynamic Routing                        Default Routing
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                            Routing Algorithms:
+                                                                     |
+                        ________________________________________________________________________________________________________
+                        |                                                |                                                     |
+               Adaptive routing Algorithm                     Non-adaptive routing Algorithm                        Hybrid routing Algorithm
+                  1.Isolated                                          1.Flooding                                          1.Link state
+                  2.Centralized                                       2. Random walk                                      2. distance vector
+                  3.Distributed
+
+Adaptive algorith       :----reflect change in topology.
+                             Get information locally from adjective routers.
+Non-adaptive Alogorithm :----Static routers.
+                             Doenloaded to router when network is booted.
+
+
+
+
+***NAT( Network address translation ):
+   ------------------------------------
+Network address translation is a method of maping an IP address space into another by modifying network address information in the IP header 
+of packets while they are in transit across a trafic routing device.
+
+
+***Gateway:
+   --------
+A gateway is a network node used in telecommunication that connect two networks with different transmission protocals together. Gateways server as an entry & exit
+point for a network as all data must pass through or communicate with the gateway prior to being routed.
+
+                     Drive     <-------> |                                  | <------>
+                     Sensors   <-------> | -----> Gateway <--------->Cloud  | <------> system AND serviers
+                     Actuators <-------> |                                  | <------>
+There are 2 main types of Gateways:
+1. Unidirectinal gateways.
+2.Bidirectinal Gateways.
+
+
+***DNS(Domain Name Sysytem):
+   -------------------------
+DNS is a hierarchical naming system that allows communication across device on a network.Most commonly, ittranslates human-readable
+domain names to computer friendly internet protocal(IP) addresses.
+->DNS translate domain name to IP addresses so browsers can load internet resourses.
+
+
+***VPN( Virtual Private Network):
+   ------------------------------
+A VPN is an encrypted connection over the internet from a device to a network. The encripted connection helps ensure that sensitive data is safely
+transmitted. It prevents unauthorized people from eavesdropping on the trafic & allows to user to conduct work remotely.
+
+***WAN( Wide-area network):
+   ------------------------
+WAN is the technology that connects your offices,data centures,cloud applications & cloud storage together. It is called a Wide-area network
+becouse it spans beyond a single building or large compus to include multiple locations spread across a specific geographic area, or even the world.
+
+***Networking Basics:
+   ------------------
+A device/system connects to the network with the help of network interface.Network interface gets an IP address which is allocated by DHCP.
+[DHCP( Dynamic Host Configuration Protocal)is a client/server protocal that automatically provides an internet protocal host with it's IP address
+ & other related configuration information such as the subnet mask and defult gateway.]
+
+  
+
+
+                                                                                                           
+IP connected device <--------------> Request access <-----------> DHCP server IPV4/IPV6 -----------------> Networking configuration paramenters
+                                           |                                                                              |
+                                       IP address                                                           | --------Default gateway
+                                                                                                            | --------Subnet mask
+                                                                                                            | --------DNS server
+->In our home network, the DHCP server is inside your router.
+->DHCP maintains list of available IP addresses and the whole range of network.
+->Range of network is IP address range.
