@@ -1,0 +1,90 @@
+***What is Cloud Computing?
+Cloud computing is a model that enables ubiquitous access to shared pools of configurable resources (like networks, servers, storage, applications) over the internet,
+allowing for rapid provision and release of these resources.
+Key Characteristics:------
+On-Demand Self-Service: Users can provision resources automatically without human intervention.
+Broad Network Access  : Services are accessible via the internet from various devices (e.g., PCs, mobile phones).
+Resource Pooling      : Resources are pooled to serve multiple users, dynamically allocating and reallocating as needed.
+Rapid Elasticity      : Resources can be scaled up or down quickly, often automatically, to meet demand.
+Measured Service      : Resource usage is monitored and reported, allowing for transparent billing and management.
+Deployment Models:-------
+Public Cloud          : Services offered over the public internet and shared among multiple organizations (e.g., Amazon Web Services, Microsoft Azure).
+Private Cloud         : Services used exclusively by one organization, offering greater control and security (can be on-premises or hosted).
+Hybrid Cloud          : Combines both public and private clouds, allowing data and applications to be shared between them.
+Service Models:---------
+IaaS                  : (Infrastructure as a Service) Provides virtualized computing resources over the internet (e.g., virtual machines, storage).
+PaaS                  : (Platform as a Service)Offers hardware and software tools over the internet, primarily for application development (e.g., Google App Engine).
+SaaS                  : (Software as a Service)Delivers software applications over the internet on a subscription basis (e.g., Microsoft 365, Salesforce).
+Benefits of Cloud Computing:-------
+Cost Efficiency      : Reduces capital expenditure by eliminating the need for physical infrastructure.
+Scalability          : Resources can be scaled easily based on user demand.
+Flexibility          : Access to a variety of services and applications.
+Disaster Recovery    : Enhanced data backup, recovery, and business continuity solutions.
+Security and Compliance:-------
+Security measures are critical, including data encryption, identity management, and compliance with regulatory standards (e.g., GDPR, HIPAA).
+GDPR                 : (General Data Protection Regulation) an organization that falls within the scope of the GDPR meets the requirements for properly handling personal data as defined in the law.
+HIPAA                : (Health Insurance Portability and Accountability Act) to protect and secure the privacy of patients' health information.
+Cloud Service Management:--------
+Involves tools for monitoring, managing, and optimizing cloud resources and services, including automation and orchestration
+Key Technologies:-------
+Virtualization       : Allows multiple virtual instances to run on a single physical server, optimizing resource use.
+Containerization     : Packages applications and their dependencies into containers, improving portability and scalability (e.g., Docker, Kubernetes).
+APIs                 : Application Programming Interfaces enable integration and interaction between different cloud services and applications.
+Use Cases:----------
+Web Hosting          : Running websites and applications in the cloud.
+Data Storage         : Storing and managing data in the cloud (e.g., Amazon S3, Google Cloud Storage).
+Big Data Analytics   : Leveraging cloud resources for large-scale data processing and analysis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
