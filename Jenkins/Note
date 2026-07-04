@@ -1,0 +1,51 @@
+Jenkins:-- Jenkin is an open-source project written in JAVA by'Kohsuke Kawaguchi' it runs on the window,linux & Macos.
+      It is community-supported,free to use and the first choice for continuous integration.
+---> Consis of plugins
+      [ Plugin: Plugin system that allows developers to write plugins affecting nearly every aspect of Jenkins behavior.
+        Special add-ons that extend Jenkins capabilities with over (2000) plugins avilabel,tat make workflows more efficient & easier to manage.
+---> Automates the entire s/w development life cycle.
+---> It was originally developed by 'Sun Microsystem in 2004 as 'HUDSON'
+    1. The project was renamed Jenkins when oracle brought the microsystem.
+    2. It can run on any major platform without compatibility issues.
+    3. Whenever developers write code, we integrate all the code of all developers at any point in time & we build,test,,deliver/deplay it to the 
+        client,This is called CI/CD.
+
+Continuous Integration(CI):----
+      Whenever a developer commits the code using source code management like Git,then the CI pipline gets the changes of the code ru
+automatically build and unit test.
+---> Due to integrating the new code with old code, we can easily get to know the code is a success or failure.
+---> It finds the errors more quickly.
+---> Delivery the products to client more frequentlt.
+---> Developers don't need to manual tasks.
+---> Reduces the developers time 20% to 30%.
+
+Continuous Delivery/Deployment(CD):----
+      Continuous delivery is making it available deployment.Anytime a new build artifact is available,the artifact is automatically placed in 
+the desired environment & deployed.
+      Continuous Deployment is when you commit your code then it gets automatically tested, build & deploy on the production server.
+
+Continuous intergration:--
+                              *****Continous Delivery*****
+Build->Test->Deplot to staging->Acceptance tests-> Deploy to production-> Smoke Test.
+------------------------------------------------   --------------------    -----------
+                        |                                  |                  |
+                  Autimation                             manual            Automation
+                               *****Continous Deployment***** 
+Build->Test->Deplot to staging->Acceptance tests-> Deploy to production-> Smoke Test.
+-------------------------------------------------------------------------------------
+                                          |
+                                      Automation
+
+1.Version Control:- Here developers need to write code for web applications. so it needs to be committed using version control system like Git or SVN.
+                    Git is a distributed system  where every developer has a full opy of the repository,whilw SVN is a centralized system where a single server holds the master copy.
+2.Build:- Lets consider your code is written in JAVA, it needs to be compiled before execution. In this build step code gets compiled.
+3.Unit Test:- If the build step is completed,then move to testing phase in this step unit step will be done.
+4.Deploy:- If the test step is completed, then move to deploy phase in this step you can deploy your code in dev,testing environment. Here you can see your application output.
+5.Auto Test:- Once our code is working fine in testing servers,Then we need to do automation testing using selenium or Junit.
+                [Selenium & Junit are not competing tools but rather complementory once used together in automated testing 
+                 Selenium->Browser Automation Tool->Remote control webdrive Grid
+                 Junit->Unit tesing Frame work.]
+6.Deploy to production:-If everthing is fine then you can directly deploy your code in production server.
+
+Note: If we have error in code then it will give feedback and it will be corrected, if we have error in build then it give feedback & it will be corrected,
+      pipline will work like this unit it reaches deploy.Because of this pipline,bugs will be reported fast & get rectified so entire development in fast.
